@@ -9,12 +9,14 @@ the first 50 terms of the fibonacci sequence, starting with 0
 # Don't try writing the code all at once. Break it down into pieces
 # I have some tips below that will help you figure this out. You can delete them (and the code that goes with them) when you no longer need them
 """
-
 fib = [0, 1]
-
+for x in range(48):
+    x=fib[-1]+fib[-2]
+    fib.append(x)
+print(fib)
 # TIP: How can you refer to the last item in a list? Print the last item in the list called fib
 
-# TIP: How about the second to last item?
+# TIP: how about the second to last item?
 
 # TIP: How could you use the two items you've already accessed to generate the next term? Print the next term of the fibonacci sequence
 
@@ -62,7 +64,7 @@ def test_contents(student_results):
         else:
             print(f"Term at index{n} is incorrect. You have {fib[n]} and I have {fibonacci_results[n]}")
             is_correct = False
-            
+
 if test_length(fib) and test_contents(fib):
     print("""
 You've passed my automated tests.

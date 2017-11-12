@@ -19,3 +19,17 @@ There is no automated checking on this one
 """
 
 shopping_list = []
+for x in range(1):
+    x=(input("What would you like to add to your shopping list? "))
+    shopping_list.append(x)
+while True:
+    add_again=input("Would you like to add anything else? ")
+    if add_again=="yes".lower():
+        y=(input("What would you like to add? "))
+        shopping_list.append(y)
+    else:
+        break
+print("Here's your list!")
+print(shopping_list)
+
+
